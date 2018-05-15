@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turret Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/turret_page/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/turret_page/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u172" class="ax_default box_1">
+        <div id="u172_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u173" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Horizontal Line) -->
+      <div id="u174" class="ax_default line">
+        <img id="u174_img" class="img " src="images/portal_gun_page/u40.png"/>
+        <!-- Unnamed () -->
+        <div id="u175" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u176" class="ax_default box_3">
+        <div id="u176_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u177" class="text">
+          <p><span>Purpose: The core enemy AI to the entire project. When the player walks in range, it becoms armed and begins to fire. When the player walks out, the turret disarms and waits.</span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u178" class="ax_default image" data-label="btnPortalGun">
+        <img id="u178_img" class="img " src="images/index/btnswitch_u18.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u179" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u180" class="ax_default image">
+        <img id="u180_img" class="img " src="images/turret_page/u180.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u181" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u182" class="ax_default box_3">
+        <div id="u182_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u183" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class TurretAI : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; //gameObject that plays sound</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; //if the player walks into the collider, play a sound</span></p><p><span>&nbsp;&nbsp;&nbsp; private void OnTriggerEnter(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if(other.CompareTag(&quot;Player&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (audioBox)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GetComponent&lt;AudioSource&gt;().Play();</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; //if the player stays in the collider, play a sound and deal damage</span></p><p><span>&nbsp;&nbsp;&nbsp; private void OnTriggerStay(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (other.CompareTag(&quot;Player&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (!GetComponent&lt;AudioSource&gt;().isPlaying)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (audioBox)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySound(12);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Health health = other.transform.GetComponentInChildren&lt;Health&gt;();</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; health.Damage(1);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; //if the player walks out of the collider, play a sound</span></p><p><span>&nbsp;&nbsp;&nbsp; private void OnTriggerExit(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (other.CompareTag(&quot;Player&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (audioBox)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySound(13);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u184" class="ax_default box_3">
+        <div id="u184_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u185" class="text">
+          <p><span>Turret.css</span></p>
+        </div>
+      </div>
+
+      <!-- btnHome (Image) -->
+      <div id="u186" class="ax_default image" data-label="btnHome">
+        <img id="u186_img" class="img " src="images/index/btnhome_u10.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u187" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u188" class="ax_default image" data-label="btnPortalGun">
+        <img id="u188_img" class="img " src="images/index/btnportalgun_u12.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u189" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnLevels (Image) -->
+      <div id="u190" class="ax_default image" data-label="btnLevels">
+        <img id="u190_img" class="img " src="images/index/btnlevels_u14.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u191" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u192" class="ax_default image" data-label="btnSwitch">
+        <img id="u192_img" class="img " src="images/index/btnswitch_u16.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u193" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u194" class="ax_default image" data-label="btnSwitch">
+        <img id="u194_img" class="img " src="images/index/btnswitch_u18.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u195" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u196" class="ax_default line">
+        <img id="u196_img" class="img " src="images/portal_gun_page/u66.png"/>
+        <!-- Unnamed () -->
+        <div id="u197" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

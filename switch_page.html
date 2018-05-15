@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Switch Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/switch_page/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/switch_page/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u142" class="ax_default box_1">
+        <div id="u142_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u143" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Horizontal Line) -->
+      <div id="u144" class="ax_default line">
+        <img id="u144_img" class="img " src="images/portal_gun_page/u40.png"/>
+        <!-- Unnamed () -->
+        <div id="u145" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u146" class="ax_default box_3">
+        <div id="u146_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u147" class="text">
+          <p><span>Purpose: How to move to the next level. A weight must be placed on this for it to be active.</span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u148" class="ax_default image" data-label="btnPortalGun">
+        <img id="u148_img" class="img " src="images/switch_page/btnportalgun_u148.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u149" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u150" class="ax_default image">
+        <img id="u150_img" class="img " src="images/switch_page/u150.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u151" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u152" class="ax_default box_3">
+        <div id="u152_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u153" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class Blocker : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; &nbsp;&nbsp; //gameObject to play sounds</span></p><p><span>&nbsp;&nbsp;&nbsp; GameObject[] switches;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //list of gameObjects to determine the turn off</span></p><p><span>&nbsp;&nbsp;&nbsp; GameObject blocker;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; //what is hidden after switches are turned on</span></p><p><span>&nbsp;&nbsp;&nbsp; int counter = 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span>&nbsp;</span></p><p><span>&nbsp;&nbsp; &nbsp; // Use this for initialization</span></p><p><span>&nbsp;&nbsp; &nbsp; void Start () {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; switches = GameObject.FindGameObjectsWithTag(&quot;Button&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; blocker = transform.GetChild(0).gameObject;</span></p><p><span>&nbsp;&nbsp; &nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; </span></p><p><span>&nbsp;&nbsp; &nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp; &nbsp; void Update () {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //if all switches are true, deactivate door</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if(checkSwitches()== true)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; counter++;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if(counter == 1)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySound(4);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; blocker.SetActive(false);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; else</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; counter = 0;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; blocker.SetActive(true);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; }</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; //are all switches activated</span></p><p><span>&nbsp;&nbsp;&nbsp; bool checkSwitches()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Switch check;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; foreach (GameObject s in switches)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; check = s.GetComponent&lt;Switch&gt;();</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (check.getActivation() != true)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; return false;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return true;</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u154" class="ax_default box_3">
+        <div id="u154_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u155" class="text">
+          <p><span>Blocker.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u156" class="ax_default box_3">
+        <div id="u156_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u157" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class Switch : MonoBehaviour {</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; private bool activated;&nbsp; &nbsp;&nbsp; //is the switch activated</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; void Start () {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; activated = false;</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; //turn activation on</span></p><p><span>&nbsp;&nbsp;&nbsp; private void OnTriggerStay(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (other.CompareTag(&quot;Player&quot;) || other.CompareTag(&quot;CompCube&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; activated = true;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; //turn activation off</span></p><p><span>&nbsp;&nbsp;&nbsp; private void OnTriggerExit(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; activated = false;</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; //allow scripts to access activation</span></p><p><span>&nbsp;&nbsp;&nbsp; public bool getActivation()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return activated;</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u158" class="ax_default box_3">
+        <div id="u158_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u159" class="text">
+          <p><span>Switch.css</span></p>
+        </div>
+      </div>
+
+      <!-- btnHome (Image) -->
+      <div id="u160" class="ax_default image" data-label="btnHome">
+        <img id="u160_img" class="img " src="images/index/btnhome_u10.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u161" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u162" class="ax_default image" data-label="btnPortalGun">
+        <img id="u162_img" class="img " src="images/index/btnportalgun_u12.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u163" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnLevels (Image) -->
+      <div id="u164" class="ax_default image" data-label="btnLevels">
+        <img id="u164_img" class="img " src="images/index/btnlevels_u14.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u165" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u166" class="ax_default image" data-label="btnSwitch">
+        <img id="u166_img" class="img " src="images/index/btnswitch_u16.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u167" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u168" class="ax_default image" data-label="btnSwitch">
+        <img id="u168_img" class="img " src="images/index/btnswitch_u18.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u169" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u170" class="ax_default line">
+        <img id="u170_img" class="img " src="images/portal_gun_page/u66.png"/>
+        <!-- Unnamed () -->
+        <div id="u171" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

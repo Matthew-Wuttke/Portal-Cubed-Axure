@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portal Gun Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/portal_gun_page/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/portal_gun_page/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u22" class="ax_default box_1">
+        <div id="u22_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u23" class="text">
+          <p><span>0</span></p>
+        </div>
+      </div>
+
+      <!-- btnHome (Image) -->
+      <div id="u24" class="ax_default image" data-label="btnHome">
+        <img id="u24_img" class="img " src="images/index/btnhome_u10.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u25" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u26" class="ax_default image" data-label="btnPortalGun">
+        <img id="u26_img" class="img " src="images/index/btnportalgun_u12.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u27" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnLevels (Image) -->
+      <div id="u28" class="ax_default image" data-label="btnLevels">
+        <img id="u28_img" class="img " src="images/index/btnlevels_u14.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u29" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u30" class="ax_default image" data-label="btnSwitch">
+        <img id="u30_img" class="img " src="images/index/btnswitch_u16.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u31" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u32" class="ax_default box_3">
+        <div id="u32_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u33" class="text">
+          <p><span>Purpose: The weapon to player's survival.</span></p>
+        </div>
+      </div>
+
+      <!-- btnPortalGun (Image) -->
+      <div id="u34" class="ax_default image" data-label="btnPortalGun">
+        <img id="u34_img" class="img " src="images/index/btnportalgun_u12.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u35" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u36" class="ax_default image">
+        <img id="u36_img" class="img " src="images/portal_gun_page/u36.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u37" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- btnSwitch (Image) -->
+      <div id="u38" class="ax_default image" data-label="btnSwitch">
+        <img id="u38_img" class="img " src="images/index/btnswitch_u18.jpg"/>
+        <!-- Unnamed () -->
+        <div id="u39" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Horizontal Line) -->
+      <div id="u40" class="ax_default line">
+        <img id="u40_img" class="img " src="images/portal_gun_page/u40.png"/>
+        <!-- Unnamed () -->
+        <div id="u41" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u42" class="ax_default box_3">
+        <div id="u42_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u43" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class PortalGun : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject orangeProjectile;&nbsp; &nbsp;&nbsp; //holds orange projectile</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject blueProjectile;&nbsp; &nbsp; &nbsp;&nbsp; //holds blue projectile</span></p><p><span>&nbsp;&nbsp;&nbsp; public Transform gunEnd;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //holds end of gun</span></p><p><span>&nbsp;&nbsp;&nbsp; private bool canShoot = true;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; //can the player shoot</span></p><p><span>&nbsp;&nbsp;&nbsp; GameObject mainCamera;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //hold a camera</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; //gameObject to play sound</span></p><p><span>&nbsp; </span></p><p><span>&nbsp;&nbsp; &nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp; &nbsp; void Update () {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //set main camer if null</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (mainCamera == null)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; mainCamera = GameObject.FindWithTag(&quot;MainCamera&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //if player can shoot check for button pressed and instantiate the projectile</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (canShoot)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (Input.GetButtonDown(&quot;FireOrange&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject proj;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; proj = GameObject.FindGameObjectWithTag(&quot;orangeProj&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (proj == null)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Instantiate(orangeProjectile, gunEnd.position, mainCamera.transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySound(3);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (Input.GetButtonDown(&quot;FireBlue&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject proj;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; proj = GameObject.FindGameObjectWithTag(&quot;blueProj&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (proj == null)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (blueProjectile)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Instantiate(blueProjectile, gunEnd.position, mainCamera.transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySound(3);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; //allows others access to change canShoot</span></p><p><span>&nbsp;&nbsp;&nbsp; public void setCanShoot(bool able)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; canShoot = able;</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u44" class="ax_default box_3">
+        <div id="u44_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u45" class="text">
+          <p><span>Portal Gun.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u46" class="ax_default box_3">
+        <div id="u46_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u47" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span>using UnityStandardAssets.Characters.FirstPerson;</span></p><p><span><br></span></p><p><span>public class PortalActive : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; protected static bool canPort = true;&nbsp;&nbsp; //holds if the player can port through it</span></p><p><span>&nbsp;&nbsp;&nbsp; protected Transform exit;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; //holds the exit</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; protected void OnTriggerEnter(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //if the player walks into it, turn off the ability to port.</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (other.CompareTag(&quot;Player&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (exit != null)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; canPort = false;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; other.transform.position = exit.position;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if (exit.parent.transform.rotation.y == transform.rotation.y)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; other.transform.Rotate(other.transform.eulerAngles.x, (other.transform.eulerAngles.y +180), other.transform.eulerAngles.z);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; else</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; other.transform.rotation = transform.rotation;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; protected void OnTriggerExit(Collider other)</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //if the player walks out of the portal, they can port back</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (other.CompareTag(&quot;Player&quot;))</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; canPort = true;</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u48" class="ax_default box_3">
+        <div id="u48_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u49" class="text">
+          <p><span>PortalActive.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u50" class="ax_default box_3">
+        <div id="u50_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u51" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class BluePortalInactive : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; &nbsp;&nbsp; //gameObject to play sounds</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject blueActive;&nbsp;&nbsp; //gameObject to hold active portal</span></p><p><span>&nbsp;&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; // Use this for initialization</span></p><p><span>&nbsp;&nbsp;&nbsp; void Start()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //play open portal sound</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySoundAtPoint(1);</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp;&nbsp; void Update()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //find orange portal and if found change to active</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; GameObject orange = GameObject.FindGameObjectWithTag(&quot;orangePortal&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (orange)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Instantiate(blueActive, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Destroy(gameObject);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u52" class="ax_default box_3">
+        <div id="u52_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u53" class="text">
+          <p><span>BluePortalInactive.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u54" class="ax_default box_3">
+        <div id="u54_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u55" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class OrangePortalInactive : MonoBehaviour {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; &nbsp; &nbsp;&nbsp; //gameObject to play sounds</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject orangeActive;&nbsp;&nbsp; //gameObject to hold active portal</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; // Use this for initialization</span></p><p><span>&nbsp;&nbsp;&nbsp; void Start()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //play open portal sound</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; GameObject clone = Instantiate(audioBox, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; clone.GetComponent&lt;AudioBox&gt;().PlaySoundAtPoint(1);</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp;&nbsp; void Update()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //find blue portal and if found change to active</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; GameObject blue = GameObject.FindGameObjectWithTag(&quot;bluePortal&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (blue)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Instantiate(orangeActive, transform.position, transform.rotation);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Destroy(gameObject);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u56" class="ax_default box_3">
+        <div id="u56_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u57" class="text">
+          <p><span>OrangePortalInactive.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u58" class="ax_default box_3">
+        <div id="u58_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u59" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class BluePortalActive :PortalActive {</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox; //gameObject to play sounds</span></p><p><span>&nbsp;&nbsp;&nbsp; private GameObject orange;&nbsp; //gameObject to hold exit</span></p><p><span><br></span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp;&nbsp; void Update()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //set exit when entered to orange portal</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; orange = GameObject.FindGameObjectWithTag(&quot;orangePortal&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if(orange.transform.childCount &gt; 0)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; exit = orange.transform.GetChild(0);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }</span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u60" class="ax_default box_3">
+        <div id="u60_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u61" class="text">
+          <p><span>BlueActivePortal.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u62" class="ax_default box_3">
+        <div id="u62_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u63" class="text">
+          <p><span>using System.Collections;</span></p><p><span>using System.Collections.Generic;</span></p><p><span>using UnityEngine;</span></p><p><span><br></span></p><p><span>public class OrangePortalActive : PortalActive</span></p><p><span>{</span></p><p><span>&nbsp;&nbsp;&nbsp; public GameObject audioBox;&nbsp; //gameObject to play sounds</span></p><p><span>&nbsp;&nbsp;&nbsp; private GameObject blue;&nbsp; &nbsp;&nbsp; //gameObject to hold exit for orange portal</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp;&nbsp; // Update is called once per frame</span></p><p><span>&nbsp;&nbsp;&nbsp; void Update()</span></p><p><span>&nbsp;&nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; //find blue portal and set it as exit</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; blue = GameObject.FindGameObjectWithTag(&quot;bluePortal&quot;);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if(blue.transform.childCount &gt; 0)</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; exit = blue.transform.GetChild(0);</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }&nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span>&nbsp;&nbsp;&nbsp; }</span></p><p><span>}</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u64" class="ax_default box_3">
+        <div id="u64_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u65" class="text">
+          <p><span>OrangeActivePortal.css</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u66" class="ax_default line">
+        <img id="u66_img" class="img " src="images/portal_gun_page/u66.png"/>
+        <!-- Unnamed () -->
+        <div id="u67" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
